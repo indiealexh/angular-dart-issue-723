@@ -1,0 +1,26 @@
+name: angular_demo_test
+description: A web app that uses AngularDart Components
+version: 0.0.1
+
+environment:
+  sdk: '>=2.0.0-dev.3.0 <3.0.0'
+
+dependencies:
+  angular: 5.0.0-alpha+1
+
+dev_dependencies:
+  browser: ^0.10.0+2
+  dart_to_js_script_rewriter: ^1.0.3
+
+dependency_overrides:
+  analyzer: ^0.31.0-alpha.1
+
+transformers:
+- angular:
+    entry_points:
+      - web/main.dart
+- dart_to_js_script_rewriter
+
+web:
+  compiler:
+    debug: dartdevc
